@@ -33,7 +33,7 @@ def get_weather(city_name):
             "Humidity": humidity,
             "Wind Speed": wind_speed
         }
-         return weather_data
+        return weather_data
 
     else:
         print("Error fetching weather data")
@@ -41,7 +41,7 @@ def get_weather(city_name):
 if __name__ == "__main__":
     city_name = "Paris"  # Nom de la ville pour laquelle vous souhaitez obtenir les informations météorologiques
     #get_weather(city_name)
-        weather_info = get_weather(city_name)
+    weather_info = get_weather(city_name)
 
     if weather_info:
         print("Weather Information:")
