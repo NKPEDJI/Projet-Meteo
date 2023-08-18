@@ -5,15 +5,15 @@ city_name = "Paris"
 BASE_URL = f"http://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_KEY}"
 
 def get_weather(city_name):
+
     params = {
+
         "q": city_name,
         "appid": API_KEY,
         "units": "metric"  # To get temperatures in Celsius
-    }
 
+    }
     response = requests.get(BASE_URL, params=params)
-    print("get response")
-    print(response.status_code)
 
     if response.status_code == 200:
         data = response.json()
@@ -34,6 +34,8 @@ def get_weather(city_name):
     else:
         print("Error fetching weather data")
 
+ 
+
 if __name__ == "__main__":
     city_name = "Paris"
     weather_info = get_weather(city_name)
@@ -42,3 +44,5 @@ if __name__ == "__main__":
         print("Weather Information:")
         for key, value in weather_info.items():
             print(f"{key}: {value}")
+
+ 
