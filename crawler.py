@@ -1,5 +1,6 @@
 import requests
 import json
+from cassandra.cluster import Cluster
 
 API_KEY = "cbedf9374cc81594a05d3ed33264416a"
 
@@ -41,6 +42,7 @@ for city in city_data:
 
             # Extraction des informations pertinentes
             weather_info = {
+                "city_id": city_id,
                 "city_name": city_name,
                 "temperature": data["main"]["temp"],
                 "humidity": data["main"]["humidity"],
@@ -55,12 +57,41 @@ for city in city_data:
 
 # Affichage des informations météorologiques
 for info in weather_data:
+    print(f"City_id: {info['city_id']}")
     print(f"City: {info['city_name']}")
-    print(f"Temperature: {info['temperature']} C")
+    print(f"Temperature: {info['temperature']} °C")
     print(f"Humidity: {info['humidity']}")
     print(f"wind_speed: {info['wind_speed']}")
     print(f"Weather Description: {info['weather_description']}")
     print("-" * 30)
     print("méteo")
 
- 
+
+auth_provider = PlainTextAuthProvider(username='elastic', password='secret')
+
+# Set up a Cluster object with the contact points (IP addresses or hostnames) of the Cassandra nodes
+cluster = Cluster(['localhost'])
+
+# Connect to the cluster and create a session
+session = cluster.connect() 
+
+#Creation du keyspace
+keyspace_stmt = "CREATE KEYSPACE IF NOT EXISTS weather_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1}"
+session.execute(keyspace_stmt)
+
+# Création du schéma de la table
+table_query = """
+    CREATE TABLE IF NOT EXISTS weather_data (
+        city_id INT PRIMARY KEY,
+        City TEXT,
+        temperature FLOAT,
+        humidity FLOAT,
+        speed FLOAT,
+        description TEXT
+    )
+"""
+session.execute(table_query) 
+
+# Fermeture de la session et du cluster
+session.shutdown()
+cluster.shutdown()
