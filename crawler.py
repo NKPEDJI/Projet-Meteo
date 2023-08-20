@@ -1,10 +1,15 @@
 import requests
 import json
 from cassandra.cluster import Cluster
-import requests
-import json
-from cassandra.cluster import Cluster
 import time
+import urllib.parse
+from decimal import Decimal
+
+import logging
+
+# Configuration du logger
+logging.basicConfig(level=logging.ERROR)
+logger = logging.getLogger(__name__)
 
 
 #----1. Recherche et Sélection d'API
@@ -14,8 +19,9 @@ import time
 
 API_KEY = "399395db781052ed64fd8577e1b39fa0"
 # Chargement des données des villes depuis le fichier city.list.json
-with open("city.json", "r", encoding="utf-8") as json_file:
+with open("city2.list.json", "r", encoding="utf-8") as json_file:
     city_data = json.load(json_file)
+
 
 # Liste pour stocker les informations météorologiques des villes de France
 weather_data = []
@@ -36,11 +42,11 @@ def fetch_weather_data(city_name):
 
 # Boucle à travers les villes
 for city in city_data:
-    if city["country"] == "FR": 
-        #print("condition france validé") # Filtrer les villes de France
+    if city["country"] == "FR":  # Filtrer les villes de France
         city_name = city["name"]
         city_id = city["id"]
-        #print(city_name)
+        # Encodage du nom de la ville pour gérer les caractères spéciaux
+        encoded_city_name = urllib.parse.quote(city_name)
 
         #API_URL = f"http://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_KEY}"
         # Paramètres pour l'appel à l'API
@@ -50,34 +56,27 @@ for city in city_data:
             "units": "metric"
         }
         # Appel à l'API avec gestion des erreurs
-        #response = requests.get(API_URL, params=params)
-        weather_response = fetch_weather_data(city_name)
+        weather_response = fetch_weather_data(encoded_city_name)
         #print(response.status_code)
-       
-        #if response.status_code == 200:
+
         if weather_response is not None:
-            #print("appel api reussi")
-            #data = response.json()
             data = weather_response
 
             # Extraction des informations pertinentes
             weather_info = {
                 "city_id": city_id,
                 "city_name": city_name,
-                "temperature": data["main"]["temp"],
                 "humidity": data["main"]["humidity"],
-                "wind_speed": data["wind"]["speed"],
-                "weather_description": data["weather"][0]["description"]              
-
+                "temperature": data["main"]["temp"],
+                "weather_description": data["weather"][0]["description"],
+                "wind_speed": data["wind"]["speed"]
             }
-            #print("extractions infos pertinents reussi")
 
             # Ajout des informations à la liste
             weather_data.append(weather_info)
-            print(weather_data)
             # Introduire un délai de 2 secondes entre les requêtes
             time.sleep(2)
-
+    
 
 # Affichage des informations météorologiques
 #for info in weather_data:
@@ -107,12 +106,13 @@ session.set_keyspace('weather_keyspace')
 table_query = """
 
     CREATE TABLE IF NOT EXISTS weather_data (
-        city_id BIGINT PRIMARY KEY,
-        City TEXT,
-        temperature FLOAT,
+        city_id INT PRIMARY KEY,
+        city_name TEXT,
         humidity INT,
-        speed FLOAT,
-        description TEXT
+        temperature FLOAT,
+        weather_description TEXT,
+        wind_speed FLOAT
+        
     )
 """
 session.execute(table_query)
@@ -120,15 +120,20 @@ session.execute(table_query)
 
 #----5. Intégration avec Cassandra en Python:----
 # Préparation de la requête d'insertion
-insert_query = """
-    INSERT INTO weather_keyspace.weather_data (city_id, City, temperature, humidity, speed, description)
-    VALUES (?, ?, ?, ?, ?, ?)
-"""
+
 
 # Insertion des données dans la table
 for info in weather_data:
+    print(info)
     try:
-        session.execute(insert_query, (info['city_id'], info['city_name'], info['temperature'], info['humidity'], info['wind_speed'], info['weather_description']))
+    
+
+        insert_query = f"""
+            INSERT INTO weather_keyspace.weather_data (city_id, city_name, humidity, temperature, weather_description, wind_speed)
+            VALUES ({info['city_id']}, '{info['city_name']}', {info['humidity']}, {info['temperature']}, '{info['weather_description']}', {info['wind_speed']})
+        """
+        session.execute(insert_query)
+
     except Exception as e:
         logger.error(f"Erreur lors de l'insertion des données pour la ville {info['city_name']}: {e}")
 

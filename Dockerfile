@@ -5,7 +5,7 @@ FROM msellami/weather_etl:latest
 LABEL maintainer = "florencenkpedji9@gmail.com"
 # Set the default working directory
 WORKDIR /app/
-COPY crawler.py requirements.txt /app/
+COPY crawler.py city2.list.json requirements.txt /app/
 RUN pip install -r requirements.txt
 CMD ["python","./crawler.py"]
 # When the container starts, run this

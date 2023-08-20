@@ -1,0 +1,202 @@
+[
+    {
+        "id": 2967108,
+        "name": "Blaye",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.66667,
+            "lat": 45.133331
+        }
+    },
+    {
+        "id": 2967103,
+        "name": "Peyrat-le-Château",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 1.77233,
+            "lat": 45.815781
+        }
+    },
+    {
+        "id": 1798813,
+        "name": "Pingfeng",
+        "state": "",
+        "country": "CN",
+        "coord": {
+            "lon": 105.561974,
+            "lat": 35.741821
+        }
+    },
+    {
+        "id": 2986728,
+        "name": "Plœuc-sur-Lié",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -2.75,
+            "lat": 48.349998
+        }
+    },
+    {
+        "id": 6450358,
+        "name": "Alçay-Alçabéhéty-Sunharette",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.9,
+            "lat": 43.099998
+        }
+    },
+    {
+        "id": 6450359,
+        "name": "Aldudes",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -1.43333,
+            "lat": 43.099998
+        }
+    },
+    {
+        "id": 6450362,
+        "name": "Ance",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.7,
+            "lat": 43.150002
+        }
+    },
+    {
+        "id": 6450363,
+        "name": "Andoins",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.23333,
+            "lat": 43.299999
+        }
+    },
+    {
+        "id": 6450365,
+        "name": "Angaïs",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.25,
+            "lat": 43.23333
+        }
+    },
+    {
+        "id": 6450366,
+        "name": "Anglet",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -1.53333,
+            "lat": 43.48333
+        }
+    },
+    {
+        "id": 6450367,
+        "name": "Angous",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.81667,
+            "lat": 43.299999
+        }
+    },
+    {
+        "id": 6450368,
+        "name": "Anhaux",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -1.28333,
+            "lat": 43.166672
+        }
+    },
+    {
+        "id": 6450370,
+        "name": "Anoye",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.13333,
+            "lat": 43.400002
+        }
+    },
+    {
+        "id": 6450371,
+        "name": "Aramits",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.71667,
+            "lat": 43.116669
+        }
+    },
+    {
+        "id": 6450372,
+        "name": "Arancou",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -1.0504,
+            "lat": 43.443901
+        }
+    },
+    {
+        "id": 6450376,
+        "name": "Arbouet-Sussaute",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -1.0,
+            "lat": 43.366669
+        }
+    },
+    {
+        "id": 6450377,
+        "name": "Arbus",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.5,
+            "lat": 43.333328
+        }
+    },
+    {
+        "id": 6450378,
+        "name": "Arcangues",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -1.51667,
+            "lat": 43.433331
+        }
+    },
+    {
+        "id": 6450380,
+        "name": "Arette",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.71667,
+            "lat": 43.099998
+        }
+    },
+    {
+        "id": 6450382,
+        "name": "Argagnon",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.68333,
+            "lat": 43.450001
+        }
+    }    
+]
