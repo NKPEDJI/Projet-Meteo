@@ -1,0 +1,42 @@
+[
+    {
+        "id": 2967108,
+        "name": "Blaye",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.66667,
+            "lat": 45.133331
+        }
+    },
+    {
+        "id": 2967103,
+        "name": "Peyrat-le-Château",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 1.77233,
+            "lat": 45.815781
+        }
+    },
+    {
+        "id": 1798813,
+        "name": "Pingfeng",
+        "state": "",
+        "country": "CN",
+        "coord": {
+            "lon": 105.561974,
+            "lat": 35.741821
+        }
+    },
+    {
+        "id": 2986728,
+        "name": "Plœuc-sur-Lié",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -2.75,
+            "lat": 48.349998
+        }
+    }
+]
