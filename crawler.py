@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 #2.---- Configuration de l'environnement de développement: fait 
 #----3. Développement du script Python----
 
-API_KEY = "399395db781052ed64fd8577e1b39fa0"
+API_KEY = "399395db781052ed64fd8577e1b39fa0" #-- à remplacer par votre api_key
 # Chargement des données des villes depuis le fichier city.list.json
 with open("city2.list.json", "r", encoding="utf-8") as json_file:
     city_data = json.load(json_file)
@@ -92,7 +92,7 @@ for city in city_data:
 
 print("Cassandra")
 #----4.Conception de la base de données Cassandra:----
-cluster = Cluster(contact_points=['172.17.0.5'], port=9042)
+cluster = Cluster(contact_points=['cassandra'], port=9042)
 # Connection au cluster et creation de session 
 session = cluster.connect()
 #Creation du keyspace

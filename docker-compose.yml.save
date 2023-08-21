@@ -1,0 +1,21 @@
+version: '3'
+services:
+  python-app:
+    build:
+      context: ./chemin-vers-votre-répertoire-de-l'application-python  # Remplacez par le chemin réel
+    depends_on:
+      - cassandra
+    environment:
+      - CASSANDRA_HOST=cassandra
+    networks:
+      - mon-reseau
+
+  cassandra:
+    image: cassandra:latest
+    ports:
+      - "9042:9042"
+    networks:
+      - mon-reseau
+
+networks:
+  mon-reseau
