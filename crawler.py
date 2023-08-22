@@ -28,15 +28,21 @@ weather_data = []
 
 
 # Fonction pour les appels à l'API
-def fetch_weather_data(city_name):
-    try:
-        API_URL = f"http://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_KEY}"
-        response = requests.get(API_URL, params=params)
-        response.raise_for_status()  # Lève une exception si la requête a échoué
-        return response.json()
-    except requests.exceptions.RequestException as e:
-        logger.error(f"Erreur lors de l'appel à l'API pour la ville {city_name}: {e}")
-        return None
+def fetch_weather_data(city_name,max_retries=3,retry_delay=5):
+    retries = 0
+    while retries < max_retries:
+        try:
+            API_URL = f"http://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_KEY}"
+            response = requests.get(API_URL, params=params)
+            response.raise_for_status()  # Lève une exception si la requête a échoué
+            return response.json()
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Erreur lors de l'appel à l'API pour la ville {city_name}: {e}")
+            retries +=1
+            logger.info(f"Tentative {retries}/{max_retries}. Réessaie dans {retry_delay} secondes...")
+            time.sleep(retry_delay)
+    
+    return None
 
 
 

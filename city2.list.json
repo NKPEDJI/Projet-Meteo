@@ -80,6 +80,26 @@
         }
     },
     {
+        "id": 2971316,
+        "name": "Us",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 1.96667,
+            "lat": 49.099998
+        }
+    },
+    {
+        "id": 2971317,
+        "name": "Urzy",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 3.20294,
+            "lat": 47.048771
+        }
+    },
+    {
         "id": 6450365,
         "name": "Angaïs",
         "state": "",
@@ -147,6 +167,287 @@
         "coord": {
             "lon": -1.0504,
             "lat": 43.443901
+        }
+    },
+    {
+        "id": 2971305,
+        "name": "Ussac",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 1.51337,
+            "lat": 45.19389
+        }
+    },
+
+    {
+        "id": 2971317,
+        "name": "Urzy",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 3.20294,
+            "lat": 47.048771
+        }
+    },
+    {
+        "id": 2971321,
+        "name": "Urville-Nacqueville",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -1.73664,
+            "lat": 49.674438
+        }
+    },
+    {
+        "id": 2971333,
+        "name": "Urt",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -1.29744,
+            "lat": 43.490089
+        }
+    },
+    {
+        "id": 2971336,
+        "name": "Urrugne",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -1.69921,
+            "lat": 43.363609
+        }
+    },
+    {
+        "id": 2971337,
+        "name": "Urou-et-Crennes",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 0.01788,
+            "lat": 48.753078
+        }
+    },
+    {
+        "id": 2971340,
+        "name": "Urmatt",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 7.32565,
+            "lat": 48.527519
+        }
+    },
+    {
+        "id": 2971344,
+        "name": "Uriménil",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 6.40046,
+            "lat": 48.1008
+        }
+    },
+    {
+        "id": 2971347,
+        "name": "Urgons",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.44254,
+            "lat": 43.649368
+        }
+    },
+    {
+        "id": 2971350,
+        "name": "Urepel",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -1.41748,
+            "lat": 43.069118
+        }
+    },
+    {
+        "id": 2971352,
+        "name": "Urdos",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.55,
+            "lat": 42.866669
+        }
+    },
+    {
+        "id": 2971353,
+        "name": "Urdès",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.58333,
+            "lat": 43.450001
+        }
+    },
+    {
+        "id": 2971357,
+        "name": "Urcuit",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -1.33668,
+            "lat": 43.485939
+        }
+    },
+    {
+        "id": 2971358,
+        "name": "Urciers",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 2.11667,
+            "lat": 46.866669
+        }
+    },
+    {
+        "id": 2971372,
+        "name": "Upie",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 4.97778,
+            "lat": 44.803589
+        }
+    },
+    {
+        "id": 2971375,
+        "name": "Unverre",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 1.09207,
+            "lat": 48.198292
+        }
+    },
+    {
+        "id": 2971376,
+        "name": "Unsac",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 3.21138,
+            "lat": 45.408779
+        }
+    },
+    {
+        "id": 2971377,
+        "name": "Unieux",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 4.27812,
+            "lat": 45.400398
+        }
+    },
+    {
+        "id": 2971380,
+        "name": "Ungersheim",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 7.30797,
+            "lat": 47.878479
+        }
+    },
+    {
+        "id": 2971386,
+        "name": "Ully-Saint-Georges",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 2.28094,
+            "lat": 49.27914
+        }
+    },
+    {
+        "id": 2971392,
+        "name": "Uhart-Cize",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -1.24365,
+            "lat": 43.162209
+        }
+    },
+    {
+        "id": 2971399,
+        "name": "Ugine",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 6.41611,
+            "lat": 45.750839
+        }
+    },
+    {
+        "id": 2971401,
+        "name": "Uffholtz",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 7.17785,
+            "lat": 47.82082
+        }
+    },
+    {
+        "id": 2971407,
+        "name": "Uckange",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 6.1492,
+            "lat": 49.30304
+        }
+    },
+    {
+        "id": 2971411,
+        "name": "Uchaux",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 4.8,
+            "lat": 44.216671
+        }
+    },
+    {
+        "id": 2971412,
+        "name": "Uchaud",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 4.26843,
+            "lat": 43.758572
+        }
+    },
+    {
+        "id": 2971413,
+        "name": "Uchacq-et-Parentis",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": -0.55996,
+            "lat": 43.927319
+        }
+    },
+    {
+        "id": 2971418,
+        "name": "Uberach",
+        "state": "",
+        "country": "FR",
+        "coord": {
+            "lon": 7.62938,
+            "lat": 48.84919
         }
     },
     {
