@@ -37,12 +37,13 @@ https://openweathermap.org/  => dans le menu compte =>  onglet mon api key
     - docker-compose build  : construire l'image docker
     - docker-compose up : pour éxecuter le projet
 
-- Une fois le projet éxéctuer avec succès:    
+- Une fois le projet éxéctuer avec succès(projetmeteo_python-app_1 exited with code 0): 
+
     - ouvrez un autre terminal et positionner vous sur le ProjetMeteo et tapez la commande docker ps 
     - Cette commande vous affichera l'ID CONTAINER de l'image cassandra ; copier cet ID
     - Executer ensuite la commande : sudo docker exec -it IDCASSANDRA /bin/bash   (vous remplacerez IDCASSANDRA par ID container de cassandra que vous avez précedemment copier)
     - Tapez ensuite la commande :  cqlsh  => pour se connecter à cassandra
-    - Une fois connectez visualisez vos données avec la requête :  select * from weather_keyspace.weather_data ;
+    - Une fois connectez visualisez vos données avec la requête :  select * from weather_keyspace.weather_data;
 
 
 # Membres:
