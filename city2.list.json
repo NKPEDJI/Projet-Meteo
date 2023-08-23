@@ -80,13 +80,63 @@
         }
     },
     {
-        "id": 2971316,
-        "name": "Us",
+        "id": 3450554,
+        "name": "Salvador",
         "state": "",
-        "country": "FR",
+        "country": "BR",
         "coord": {
-            "lon": 1.96667,
-            "lat": 49.099998
+            "lon": -38.51083,
+            "lat": -12.97111
+        }
+    },
+    {
+        "id": 3450560,
+        "name": "Salto Grande",
+        "state": "",
+        "country": "BR",
+        "coord": {
+            "lon": -49.985561,
+            "lat": -22.89278
+        }
+    },
+    {
+        "id": 3450561,
+        "name": "Salto do Itararé",
+        "state": "",
+        "country": "BR",
+        "coord": {
+            "lon": -49.625832,
+            "lat": -23.601391
+        }
+    },
+    {
+        "id": 3450563,
+        "name": "Salto de Pirapora",
+        "state": "",
+        "country": "BR",
+        "coord": {
+            "lon": -47.57333,
+            "lat": -23.64889
+        }
+    },
+    {
+        "id": 3450566,
+        "name": "Salto da Divisa",
+        "state": "",
+        "country": "BR",
+        "coord": {
+            "lon": -39.946941,
+            "lat": -16.002781
+        }
+    },
+    {
+        "id": 3450594,
+        "name": "Salto",
+        "state": "",
+        "country": "BR",
+        "coord": {
+            "lon": -47.286942,
+            "lat": -23.20083
         }
     },
     {
