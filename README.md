@@ -46,9 +46,6 @@ https://openweathermap.org/  => dans le menu compte =>  onglet mon api key
     - Une fois connectez visualisez vos données avec la requête :  select * from weather_keyspace.weather_data;
 
 
-# Membres:
+# Réalisatrice:
 Projet réalisé par :
 - N KPEDJI Florence
-- GUERARD Valentin
--  ALLAH ASRA BADJINAN Gaëtan
-- Mohamed Rachidy RACHDA
